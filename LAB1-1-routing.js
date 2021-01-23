@@ -7,10 +7,7 @@ window.onload = function() {
     //STEP #3 - Store the main information area as a variable
     var infoArea = document.getElementById('mainContent');
 
-    setWhite();
-    checkQueryString();
-
-    //STEP #4 - Check the page's query string, act accordingly
+    //STEP #4 - Create function that checks the page's query string, act accordingly
     function checkQueryString() {
         //IF it's the 'about' page, fire the setGreen() function
         if(myLocInfo.search === "?about") {
@@ -24,7 +21,7 @@ window.onload = function() {
         }
     }
 
-
+    //STEP #5 - Create function to adjust the content area to home info and the background to white.
     function setWhite() {
         //CONTENT FOR HOME PAGE - BACKGROUND IS white
         var contentHome = "<h3>Welcome to our website!</h3>";
@@ -34,9 +31,7 @@ window.onload = function() {
         backColor.style.backgroundColor = "white";
     }
 
-    //STEP #3 - Store the product btn as a variable
-
-
+    //STEP #6 - Create function to adjust the content area to 'product info' and the background to red.
     function setRed() {
         //#### CONTENT FOR PRODUCTS PAGE ====  - BACKGROUND IS red
         var contentProducts = "<h3>Our Top 5 Products</h3>";
@@ -46,6 +41,7 @@ window.onload = function() {
         //==== END OF CONTENT FOR PRODUCTS PAGE ####
     }
 
+    //STEP #7 - Create function to adjust the content area to 'about product' and background to green.
     function setGreen() {
         //#### CONTENT FOR ABOUT US PAGE ==== - BACKGROUND IS green
         var contentAbout = "<h3>About Computer Corp</h3>";
@@ -56,6 +52,7 @@ window.onload = function() {
         //==== END OF CONTENT FOR ABOUT US PAGE ####
     }
 
-
-    //STEP #2 - check to see if the .
+    //STEP #8 - Onload, call the following functions
+    setWhite();
+    checkQueryString();
 };
