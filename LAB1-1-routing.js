@@ -2,17 +2,23 @@
 window.onload = function() {
     //STEP #1 - store documents location as a variable
     var myLocInfo = window.location;
+    //STEP #2 - Store the page's body as a variable
     var backColor = document.body;
+    //STEP #3 - Store the main information area as a variable
     var infoArea = document.getElementById('mainContent');
+
     setWhite();
     checkQueryString();
 
-    //STEP #2 - while the pages location is '?home', use the function setWhite();
+    //STEP #4 - Check the page's query string, act accordingly
     function checkQueryString() {
+        //IF it's the 'about' page, fire the setGreen() function
         if(myLocInfo.search === "?about") {
             setGreen();
+            //If it's the product's page, fire the setRed() function
         } else if(myLocInfo.search === "?products") {
             setRed();
+            //Otherwise, assume it's the 'Home' page and fire the setWhite() function
         } else {
             setWhite();
         }
